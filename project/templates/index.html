@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main page
+{% endblock %}
+
+{% block main %}
+
+    <form action="/" method="post" class="flexbox-container" name="index">
+        <button class="contained" type="submit" value="visualise" name="index">VISUALISE</button>
+        <button class="contained" type="submit" value="modify" name="index">MODIFY</button>
+    </form>
+    <br><br><br><br><br><br><br><br>
+    <div class="contained2">
+        <h1 class="quote">“Jiu-jitsu is not about being better than someone else.&emsp;<br>&emsp;It’s about being better than you used to be.”<br>–Carlos Gracie Jr.</h1>
+    </div>
+
+
+{% endblock %}

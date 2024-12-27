@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Visualise
+{% endblock %}
+
+{% block main %}
+
+    <form action="/visualise" method="post" class="contained2">
+        <select class="form-control" name="visualise" type="text">
+            <option value="" disabled selected>Select your minigame</option>
+            <option value="solution">Individual Solutions</option>
+            <option value="run">Technique Run</option>
+        </select>
+        <button class="btn btn-primary" type="submit">Select</button>
+    </form>
+    <br><br>
+
+    <div class="flexbox-container">
+        <table class="table1">
+            <thead>
+                <tr>
+                    <th scope="col">Technique</th>
+                    <th scope="col">Difficulty Rating /10</th>
+                    <th scope="col">Favorite</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows2 %}
+                    <tr>
+                        <td>{{ row['name'] }}</td>
+                        <td>{{ row['difficulty'] }}</td>
+                        <td>{{ row['favorite'] }}</td>
+                        </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table class="table2">
+            <thead>
+                <tr>
+                    <th scope="col">Top/Bottom</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">Favorite</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows1 %}
+                    <tr>
+                        <td>{{ row['b_t'] }}</td>
+                        <td>{{ row['name'] }}</td>
+                        <td>{{ row['favorite'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,2 @@
+        pos_id1 = db.execute("SELECT pos_id1 FROM techniques")
+        random_value1 = random.choice(list(pos_id1.values()))

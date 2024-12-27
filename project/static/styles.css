@@ -1,0 +1,99 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #ea433b;
+}
+nav .navbar-brand .red
+{
+    color: #fefefe;
+}
+
+body {
+    height: 100vh;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+    background: #000000;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.box {
+    border: 5px solid #000;
+    border-radius: 10px;
+    background-image: url(/static/GBfight.jpg);
+    background-size: cover;
+    color: #060270;
+    font-size: 1rem;
+}
+
+.talk2 {
+    text-align: left;
+    font-size: 1rem;
+    border-radius: 10px;
+    background: #EA820C;
+    width: 40%;
+    padding: 10px;
+}
+
+.talk1 {
+    font-size: 1.7rem;
+    border-radius: 10px;
+    background: #EA820C;
+    width: 35%;
+    padding: 10px;
+}
+
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contained {
+    align-content: center;
+    border-radius: 25px;
+    padding: 25px;
+    width: 45%;
+    color: #ffffff;
+    background: linear-gradient(135deg, #E02F2B, #024677);
+}
+
+.contained2 {
+    align-content: center;
+    border-radius: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #E02F2B, #024677);
+}
+
+.table1 {
+    border-radius: 25px;
+    padding: 25px;
+    width: 40%;
+    background-color: #ffffff;
+}
+
+.table2 {
+    border-radius: 25px;
+    padding: 25px;
+    width: 40%;
+    background-color: #ffffff;
+}
+
+.quote {
+    background-color: #ffffff;
+    padding: 5px;
+    color: #000000;
+    border-radius: 25px;
+}
+
+.select {
+    background-color: #ffffff;
+    color: #000000;
+    width: 75%;
+}

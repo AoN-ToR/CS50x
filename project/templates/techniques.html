@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Features
+{% endblock %}
+
+{% block main %}
+
+<form action="/techniques" method="post" class="quote">
+    <label for="select">Select what to do </label><br>
+    <select name="select" id="select" style="width: 75%; height: 50%">
+        <option value="" disabled selected>...</option>
+        <option value="insert">Insert technique</option>
+        <option value="delete">Delete technique</option>
+        <option value="upgrade">Upgrade technique to Favorite</option>
+        <option value="downgrade">Downgrade technique from Favorite</option>
+    </select>
+
+    <br><br>
+    <label for="position1">Begining position</label><br>
+    <label><input type="radio" name="b_t1" value="bottom">Bottom</label>
+    <label><input type="radio" name="b_t1" value="top">Top</label>
+    <input type="text" name="position1" id="position1">
+    <br>
+    <label for="technique">Technique</label><input type="text" name="technique" id="technique">
+    <br>
+    <label for="difficulty">Difficulty (between 1 and 10):</label><input type="number" id="difficulty" name="difficulty" min="1" max="10">
+    <br>
+    <label for="position2">Ending position</label><br>
+    <label><input type="radio" name="b_t2" value="bottom">Bottom</label>
+    <label><input type="radio" name="b_t2" value="top">Top</label>
+    <input type="text" name="position2" id="position2">
+    <br><br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}

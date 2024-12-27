@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Technique Run
+{% endblock %}
+
+{% block main %}
+    <div class="contained2" style="align-content: center;">
+        <div class="quote" style="padding: 25px; display: flex; justify-content: space-between;">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Beginning position</th>
+                        <th scope="col">Select technique</th>
+                        <th scope="col">End position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <form action="/run" method="post">
+                        <tr>
+                            <td>{{ random_position1 }}</td>
+                            <td><input type="text" name="technique" id="technique" placeholder="Input technique"></td>
+                            <td>{{ random_position2 }}</td>
+                        </tr>
+                </tbody>
+            </table>
+            <h2>Current points: {{ points }}</h2>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="contained2">
+        <h1 class="quote">Record: {{ streak[0]["points"] }}</h1>
+    </div>
+{% endblock %}

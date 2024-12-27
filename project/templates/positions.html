@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Positions
+{% endblock %}
+
+{% block main %}
+
+<form action="/positions" method="post" class="quote">
+    <label for="select">Select what to do </label><br>
+    <select name="select" id="select" style="width: 75%; height: 50%">
+        <option value="" disabled selected>...</option>
+        <option value="insert">Insert position</option>
+        <option value="delete">Delete position</option>
+        <option value="upgrade">Upgrade position to Favorite</option>
+        <option value="downgrade">Downgrade position from Favorite</option>
+    </select>
+
+    <br><br>
+    <label for="position">Position Name</label><br>
+    <label><input type="radio" name="b_t" value="bottom">Bottom</label>
+    <label><input type="radio" name="b_t" value="top">Top</label>
+    <label><input type="radio" name="b_t" value="both">Bottom & Top</label>
+    <input type="text" name="position" id="position">
+    <br><br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
